@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+:root {
+    --Light-red: hsl(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+
+    --Light-slate-blue : hsl(252, 100%, 67%); /* (background) */
+    --Light-royal-blue : hsl(241, 81%, 54%); /* (background) */
+
+    --Violet-blue : hsla(256, 72%, 46%, 1); /* (circle) */
+    --Persian-blue: hsla(241, 72%, 46%, 0); /* (circle) */
+
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: hsl(221, 100%, 96%);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, .24) 0px 3px 8px;
+    border-radius: 1.5rem;   
+}
+
+.container .result {
+    width: 50%;
+    padding: 2rem 1.5rem;
+    background: linear-gradient(to bottom, var(--Light-slate-blue),var(--Light-royal-blue));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 1.5rem;
+    gap: 1rem;    
+}
+
+.container .result p {
+    color: var(--Light-lavender);
+}
+
+.container .result p:first-child {
+    margin-bottom: 0.8rem;
+}
+
+.container .result .circle {
+    background: linear-gradient(to bottom, var(--Violet-blue),var(--Persian-blue));;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.container .result .circle h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    color: var(--White);
+}
+
+.container .result .circle p {
+    color: hsl(241, 51%, 78%);
+}
+
+.container .result h3 {
+    color: var(--White);
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+.container .result p:last-child {
+    width: 65%;
+    margin-bottom: 0.6rem;
+}
+
+/* ******************************** */
+.container .summary {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 2rem;
+}
+
+.container .summary h3 {
+    margin-bottom: 1rem;
+}
+
+.container .summary .rows {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.container .summary .rows:nth-child(2) {
+    background-color: hsla(0, 100%, 67%, .1);
+}
+
+.container .summary .rows:nth-child(3) {
+    background-color: hsla(39, 100%, 56%, .1);
+}
+
+.container .summary .rows:nth-child(4) {
+    background-color: hsla(166, 100%, 37%, .1);
+}
+
+.container .summary .rows:nth-child(5) {
+    background-color: hsla(234, 85%, 45%, .1);
+}
+
+.reation-title {
+    color: var(--Light-red);
+}
+
+.memory-title {
+    color: var(--Orangey-yellow);
+}
+
+.verbal-title {
+    color: var(--Green-teal);
+}
+
+.visual-title {
+    color: var(--Cobalt-blue);
+}
+
+.badge b {
+    margin-left: 0.4rem;
+}
+
+.rows p {
+    color: gray;
+}
+
+.rows p b {
+    color: var(--Dark-gray-blue);
+}
+
+.btn {
+    font-family: inherit;
+    background-color: var(--Dark-gray-blue);
+    padding: 1rem;
+    color: var(--White);
+    outline: none;
+    border: none;
+    border-radius: 2rem;
+    justify-content: center;
+    font-size: 1rem;
+    margin-top: auto;
+}
+
+.btn:hover {
+    background: linear-gradient(to bottom, var(--Light-slate-blue),var(--Light-royal-blue));
+    transition: 0.3s ease-in-out;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    margin: 1.5rem 0 0.5rem;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 650px) {
+    body {
+        align-items: flex-start;
+        align-items: center;
+        background-color: white;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: none;
+    }
+
+    .container .result {
+        border-radius: 0 0 1.5rem 1.5rem;
+        width: auto;
+    }
+
+    .container .summary {
+        width: 100%;
+    }
+
+    .attribution {
+        margin: 0 auto 1rem;
+    }
+}
